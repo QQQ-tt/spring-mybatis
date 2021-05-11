@@ -60,8 +60,6 @@
       <artifactId>spring-jdbc</artifactId>
       <version>5.0.5.RELEASE</version>
     </dependency>
-<<<<<<< HEAD
-=======
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
@@ -72,11 +70,9 @@
       <artifactId>aspectjweaver</artifactId>
       <version>1.9.6</version>
     </dependency>
->>>>>>> 238ac9a (java文件配置整合spring+mybatis)
   </dependencies>
   <properties>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
   </properties>
-
 </project>
