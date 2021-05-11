@@ -22,5 +22,5 @@ public interface UserMapper {
    * @return 结果
    */
   @Select("select * from test where name like '%${value}%'")
-  List<UserBean> selectMany(String name);
+  List<UserBean> selectLikeName(String name);
 }

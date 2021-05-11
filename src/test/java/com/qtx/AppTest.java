@@ -1,8 +1,10 @@
 package com.qtx;
 
 import com.spring.bean.UserBean;
+import com.spring.bean.UserTestBean;
 import com.spring.config.SpringConfig;
 import com.spring.service.UserService;
+import com.spring.service.UserTestService;
 import lombok.SneakyThrows;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,6 +44,24 @@ public class AppTest {
     List<UserBean> userBeans = userService.queryMany("q");
     for (UserBean userBean : userBeans) {
       System.out.println(userBean);
+    }
+  }
+
+  @Autowired private UserTestService userTestService;
+
+  @Test
+  public void test2() {
+    List<UserTestBean> userTestBeans = userTestService.queryByName("123");
+    for (UserTestBean userTestBean : userTestBeans) {
+      System.out.println(userTestBean);
+    }
+  }
+
+  @Test
+  public void test3() {
+    List<UserTestBean> likeName = userTestService.queryLikeName("q");
+    for (UserTestBean userTestBean : likeName) {
+      System.out.println(userTestBean);
     }
   }
 }
